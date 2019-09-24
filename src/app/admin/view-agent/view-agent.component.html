@@ -1,0 +1,41 @@
+<!-- <p>view-agent works!</p> -->
+<!-- {{this.myData['0'].adhar}} -->
+<!-- {{firstname}}
+{{policyName}} -->
+<div class="container-fluid" id="tb">
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">s.no</th>
+
+                <th scope="col">Title</th>
+
+                <th scope="col">First-name</th>
+                <th scope="col">Last-name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Policy Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of myData ;let i=index">
+            <tr>
+                <td>{{i+1 }}</td>
+
+                <td>{{myData[i].title}}</td>
+                <td>{{myData[i].firstname}}</td>
+                <td>{{myData[i].lastname}}</td>
+                <td>{{myData[i].phone}}</td>
+                <td>{{myData[i].email}}</td>
+                <td>{{myData[i].policy['policyName']}}</td>
+                <td>
+
+                    <button type="submit" class="btn btn-disabled" disabled>Aprooved</button> &nbsp;
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
